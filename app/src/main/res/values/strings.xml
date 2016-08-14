@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">Shark Behavior</string>
+    <string name="login">Login:</string>
+    <string name="senha">Senha:</string>
+    <string name="title_activity_realizar_observacao">RealizarObservacaoActivity</string>
+    <string name="action_settings">Settings</string>
+    <string name="descricao_imagem">Imagem para especificar o local do tubarão.</string>
+    <string name="num_pessoas">25</string>
+    <string name="observadores">Observadores:</string>
+    <string name="capturar" >Capturar com câmera</string>
+    <string name="outras_observacoes">Outras observações:</string>
+    <string name="cadastrar_observacao">Cadastrar observação</string>
+    <string name="fechar">Fechar</string>
+    <string name="entrar">Entrar</string>
+    <string name="imagem_de_login">Imagem de login</string>
+    <string name="indique_o_local_onde_o_tubar_o_se_localiza">Indique o local onde o tubarão se localiza:</string>
+    <string name="indique_o_comportamento_do_tubar_o">Indique o comportamento do tubarão:</string>
+    <string name="nadando">Nadando</string>
+    <string name="parado">Parado</string>
+    <string name="posi_o_1_ou_noroeste">Posição 1 ou noroeste.</string>
+    <string name="posi_o_2_ou_norte">Posição 2 ou norte.</string>
+    <string name="posi_o_3_ou_nordeste">Posição 3 ou nordeste.</string>
+    <string name="posi_o_4_ou_oeste">Posição 4 ou oeste.</string>
+    <string name="posi_o_5_ou_centro">Posição 5 ou centro.</string>
+    <string name="posi_o_6_ou_leste">Posição 6 ou leste.</string>
+    <string name="posi_o_7_ou_sudoeste">Posição 7 ou sudoeste.</string>
+    <string name="posi_o_8_ou_sul">Posição 8 ou sul.</string>
+    <string name="posi_o_9_ou_sudeste">Posição 9 ou sudeste.</string>
+</resources>
