@@ -37,7 +37,6 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 
-
 public class RealizaObservacaoActivity extends AppCompatActivity {
 
 
@@ -45,7 +44,7 @@ public class RealizaObservacaoActivity extends AppCompatActivity {
     private static final int MAX_FACES = 50;
 
     private TextView valorObservadoresTextView;
-    private int numeroObservadores=25;
+    private int numeroObservadores = 25;
     private Button capturarCameraButton;
     private String userChoosenTask;
     private SeekBar observadoresSeekBar;
@@ -71,7 +70,7 @@ public class RealizaObservacaoActivity extends AppCompatActivity {
 
         valorObservadoresTextView = (TextView) findViewById(R.id.valorObservadoresTextView);
 
-        capturarCameraButton = (Button)findViewById(R.id.capturarCameraButton);
+        capturarCameraButton = (Button) findViewById(R.id.capturarCameraButton);
         capturarCameraButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -79,211 +78,106 @@ public class RealizaObservacaoActivity extends AppCompatActivity {
             }
         });
 
-       observadoresSeekBar = (SeekBar) findViewById(R.id.observadoresSeekBar);
-       observadoresSeekBar.setOnSeekBarChangeListener(seekBarListener);
+        observadoresSeekBar = (SeekBar) findViewById(R.id.observadoresSeekBar);
+        observadoresSeekBar.setOnSeekBarChangeListener(seekBarListener);
 
 
     }
 
-    public void clicaLocalTubarao(View v){
+    public void resetImageViews() {
+        ImageView img1 = (ImageView) findViewById(R.id.imageView1);
+        img1.setImageResource(R.drawable.agua);
+        ImageView img2 = (ImageView) findViewById(R.id.imageView2);
+        img2.setImageResource(R.drawable.agua);
+        ImageView img3 = (ImageView) findViewById(R.id.imageView3);
+        img3.setImageResource(R.drawable.agua);
+        ImageView img4 = (ImageView) findViewById(R.id.imageView4);
+        img4.setImageResource(R.drawable.agua);
+        ImageView img5 = (ImageView) findViewById(R.id.imageView5);
+        img5.setImageResource(R.drawable.pedra);
+        ImageView img6 = (ImageView) findViewById(R.id.imageView6);
+        img6.setImageResource(R.drawable.agua);
+        ImageView img7 = (ImageView) findViewById(R.id.imageView7);
+        img7.setImageResource(R.drawable.agua);
+        ImageView img8 = (ImageView) findViewById(R.id.imageView8);
+        img8.setImageResource(R.drawable.agua);
+        ImageView img9 = (ImageView) findViewById(R.id.imageView9);
+        img9.setImageResource(R.drawable.agua);
+    }
 
-        switch (v.getId()){
-            case R.id.imageView1 :{
+    public void clicaLocalTubarao(View v) {
+
+        switch (v.getId()) {
+            case R.id.imageView1: {
                 imagemSelecionada = 1;
-                ImageView img1= (ImageView) v;
+                resetImageViews();
+
+                ImageView img1 = (ImageView) v;
                 img1.setImageResource(R.drawable.aguax);
-                ImageView img2 = (ImageView) findViewById(R.id.imageView2);
-                img2.setImageResource(R.drawable.agua);
-                ImageView img3 = (ImageView) findViewById(R.id.imageView3);
-                img3.setImageResource(R.drawable.agua);
-                ImageView img4 = (ImageView) findViewById(R.id.imageView4);
-                img4.setImageResource(R.drawable.agua);
-                ImageView img5 = (ImageView) findViewById(R.id.imageView5);
-                img5.setImageResource(R.drawable.pedra);
-                ImageView img6 = (ImageView) findViewById(R.id.imageView6);
-                img6.setImageResource(R.drawable.agua);
-                ImageView img7 = (ImageView) findViewById(R.id.imageView7);
-                img7.setImageResource(R.drawable.agua);
-                ImageView img8 = (ImageView) findViewById(R.id.imageView8);
-                img8.setImageResource(R.drawable.agua);
-                ImageView img9 = (ImageView) findViewById(R.id.imageView9);
-                img9.setImageResource(R.drawable.agua);
                 break;
             }
-            case R.id.imageView2 :{
+            case R.id.imageView2: {
                 imagemSelecionada = 2;
-                ImageView img2= (ImageView) v;
+                resetImageViews();
+
+                ImageView img2 = (ImageView) v;
                 img2.setImageResource(R.drawable.aguax);
-                ImageView img1 = (ImageView) findViewById(R.id.imageView1);
-                img1.setImageResource(R.drawable.agua);
-                ImageView img3 = (ImageView) findViewById(R.id.imageView3);
-                img3.setImageResource(R.drawable.agua);
-                ImageView img4 = (ImageView) findViewById(R.id.imageView4);
-                img4.setImageResource(R.drawable.agua);
-                ImageView img5 = (ImageView) findViewById(R.id.imageView5);
-                img5.setImageResource(R.drawable.pedra);
-                ImageView img6 = (ImageView) findViewById(R.id.imageView6);
-                img6.setImageResource(R.drawable.agua);
-                ImageView img7 = (ImageView) findViewById(R.id.imageView7);
-                img7.setImageResource(R.drawable.agua);
-                ImageView img8 = (ImageView) findViewById(R.id.imageView8);
-                img8.setImageResource(R.drawable.agua);
-                ImageView img9 = (ImageView) findViewById(R.id.imageView9);
-                img9.setImageResource(R.drawable.agua);
                 break;
             }
-            case R.id.imageView3 :{
+            case R.id.imageView3: {
                 imagemSelecionada = 3;
-                ImageView img3= (ImageView) v;
+                resetImageViews();
+
+                ImageView img3 = (ImageView) v;
                 img3.setImageResource(R.drawable.aguax);
-                ImageView img2 = (ImageView) findViewById(R.id.imageView2);
-                img2.setImageResource(R.drawable.agua);
-                ImageView img1 = (ImageView) findViewById(R.id.imageView1);
-                img1.setImageResource(R.drawable.agua);
-                ImageView img4 = (ImageView) findViewById(R.id.imageView4);
-                img4.setImageResource(R.drawable.agua);
-                ImageView img5 = (ImageView) findViewById(R.id.imageView5);
-                img5.setImageResource(R.drawable.pedra);
-                ImageView img6 = (ImageView) findViewById(R.id.imageView6);
-                img6.setImageResource(R.drawable.agua);
-                ImageView img7 = (ImageView) findViewById(R.id.imageView7);
-                img7.setImageResource(R.drawable.agua);
-                ImageView img8 = (ImageView) findViewById(R.id.imageView8);
-                img8.setImageResource(R.drawable.agua);
-                ImageView img9 = (ImageView) findViewById(R.id.imageView9);
-                img9.setImageResource(R.drawable.agua);
                 break;
             }
-            case R.id.imageView4 :{
+            case R.id.imageView4: {
                 imagemSelecionada = 4;
-                ImageView img4= (ImageView) v;
+                resetImageViews();
+
+                ImageView img4 = (ImageView) v;
                 img4.setImageResource(R.drawable.aguax);
-                ImageView img2 = (ImageView) findViewById(R.id.imageView2);
-                img2.setImageResource(R.drawable.agua);
-                ImageView img3 = (ImageView) findViewById(R.id.imageView3);
-                img3.setImageResource(R.drawable.agua);
-                ImageView img1 = (ImageView) findViewById(R.id.imageView1);
-                img1.setImageResource(R.drawable.agua);
-                ImageView img5 = (ImageView) findViewById(R.id.imageView5);
-                img5.setImageResource(R.drawable.pedra);
-                ImageView img6 = (ImageView) findViewById(R.id.imageView6);
-                img6.setImageResource(R.drawable.agua);
-                ImageView img7 = (ImageView) findViewById(R.id.imageView7);
-                img7.setImageResource(R.drawable.agua);
-                ImageView img8 = (ImageView) findViewById(R.id.imageView8);
-                img8.setImageResource(R.drawable.agua);
-                ImageView img9 = (ImageView) findViewById(R.id.imageView9);
-                img9.setImageResource(R.drawable.agua);
                 break;
             }
-            case R.id.imageView5 :{
+            case R.id.imageView5: {
                 imagemSelecionada = 5;
-                ImageView img5= (ImageView) v;
+                resetImageViews();
+
+                ImageView img5 = (ImageView) v;
                 img5.setImageResource(R.drawable.pedrax);
-                ImageView img2 = (ImageView) findViewById(R.id.imageView2);
-                img2.setImageResource(R.drawable.agua);
-                ImageView img3 = (ImageView) findViewById(R.id.imageView3);
-                img3.setImageResource(R.drawable.agua);
-                ImageView img4 = (ImageView) findViewById(R.id.imageView4);
-                img4.setImageResource(R.drawable.agua);
-                ImageView img1 = (ImageView) findViewById(R.id.imageView1);
-                img1.setImageResource(R.drawable.agua);
-                ImageView img6 = (ImageView) findViewById(R.id.imageView6);
-                img6.setImageResource(R.drawable.agua);
-                ImageView img7 = (ImageView) findViewById(R.id.imageView7);
-                img7.setImageResource(R.drawable.agua);
-                ImageView img8 = (ImageView) findViewById(R.id.imageView8);
-                img8.setImageResource(R.drawable.agua);
-                ImageView img9 = (ImageView) findViewById(R.id.imageView9);
-                img9.setImageResource(R.drawable.agua);
                 break;
             }
-            case R.id.imageView6 :{
+            case R.id.imageView6: {
                 imagemSelecionada = 6;
-                ImageView img6= (ImageView) v;
+                resetImageViews();
+
+                ImageView img6 = (ImageView) v;
                 img6.setImageResource(R.drawable.aguax);
-                ImageView img2 = (ImageView) findViewById(R.id.imageView2);
-                img2.setImageResource(R.drawable.agua);
-                ImageView img3 = (ImageView) findViewById(R.id.imageView3);
-                img3.setImageResource(R.drawable.agua);
-                ImageView img4 = (ImageView) findViewById(R.id.imageView4);
-                img4.setImageResource(R.drawable.agua);
-                ImageView img5 = (ImageView) findViewById(R.id.imageView5);
-                img5.setImageResource(R.drawable.pedra);
-                ImageView img1 = (ImageView) findViewById(R.id.imageView1);
-                img1.setImageResource(R.drawable.agua);
-                ImageView img7 = (ImageView) findViewById(R.id.imageView7);
-                img7.setImageResource(R.drawable.agua);
-                ImageView img8 = (ImageView) findViewById(R.id.imageView8);
-                img8.setImageResource(R.drawable.agua);
-                ImageView img9 = (ImageView) findViewById(R.id.imageView9);
-                img9.setImageResource(R.drawable.agua);
                 break;
             }
-            case R.id.imageView7 :{
+            case R.id.imageView7: {
                 imagemSelecionada = 7;
-                ImageView img7= (ImageView) v;
+                resetImageViews();
+
+                ImageView img7 = (ImageView) v;
                 img7.setImageResource(R.drawable.aguax);
-                ImageView img2 = (ImageView) findViewById(R.id.imageView2);
-                img2.setImageResource(R.drawable.agua);
-                ImageView img3 = (ImageView) findViewById(R.id.imageView3);
-                img3.setImageResource(R.drawable.agua);
-                ImageView img4 = (ImageView) findViewById(R.id.imageView4);
-                img4.setImageResource(R.drawable.agua);
-                ImageView img5 = (ImageView) findViewById(R.id.imageView5);
-                img5.setImageResource(R.drawable.pedra);
-                ImageView img6 = (ImageView) findViewById(R.id.imageView6);
-                img6.setImageResource(R.drawable.agua);
-                ImageView img1 = (ImageView) findViewById(R.id.imageView1);
-                img1.setImageResource(R.drawable.agua);
-                ImageView img8 = (ImageView) findViewById(R.id.imageView8);
-                img8.setImageResource(R.drawable.agua);
-                ImageView img9 = (ImageView) findViewById(R.id.imageView9);
-                img9.setImageResource(R.drawable.agua);
                 break;
             }
-            case R.id.imageView8 :{
+            case R.id.imageView8: {
                 imagemSelecionada = 8;
-                ImageView img8= (ImageView) v;
+                resetImageViews();
+
+                ImageView img8 = (ImageView) v;
                 img8.setImageResource(R.drawable.aguax);
-                ImageView img2 = (ImageView) findViewById(R.id.imageView2);
-                img2.setImageResource(R.drawable.agua);
-                ImageView img3 = (ImageView) findViewById(R.id.imageView3);
-                img3.setImageResource(R.drawable.agua);
-                ImageView img4 = (ImageView) findViewById(R.id.imageView4);
-                img4.setImageResource(R.drawable.agua);
-                ImageView img5 = (ImageView) findViewById(R.id.imageView5);
-                img5.setImageResource(R.drawable.pedra);
-                ImageView img6 = (ImageView) findViewById(R.id.imageView6);
-                img6.setImageResource(R.drawable.agua);
-                ImageView img7 = (ImageView) findViewById(R.id.imageView7);
-                img7.setImageResource(R.drawable.agua);
-                ImageView img1 = (ImageView) findViewById(R.id.imageView1);
-                img1.setImageResource(R.drawable.agua);
-                ImageView img9 = (ImageView) findViewById(R.id.imageView9);
-                img9.setImageResource(R.drawable.agua);
                 break;
             }
-            case R.id.imageView9 :{
+            case R.id.imageView9: {
                 imagemSelecionada = 9;
-                ImageView img9= (ImageView) v;
+                resetImageViews();
+
+                ImageView img9 = (ImageView) v;
                 img9.setImageResource(R.drawable.aguax);
-                ImageView img2 = (ImageView) findViewById(R.id.imageView2);
-                img2.setImageResource(R.drawable.agua);
-                ImageView img3 = (ImageView) findViewById(R.id.imageView3);
-                img3.setImageResource(R.drawable.agua);
-                ImageView img4 = (ImageView) findViewById(R.id.imageView4);
-                img4.setImageResource(R.drawable.agua);
-                ImageView img5 = (ImageView) findViewById(R.id.imageView5);
-                img5.setImageResource(R.drawable.pedra);
-                ImageView img6 = (ImageView) findViewById(R.id.imageView6);
-                img6.setImageResource(R.drawable.agua);
-                ImageView img7 = (ImageView) findViewById(R.id.imageView7);
-                img7.setImageResource(R.drawable.agua);
-                ImageView img8 = (ImageView) findViewById(R.id.imageView8);
-                img8.setImageResource(R.drawable.agua);
-                ImageView img1 = (ImageView) findViewById(R.id.imageView1);
-                img1.setImageResource(R.drawable.agua);
                 break;
             }
             default:
@@ -291,20 +185,34 @@ public class RealizaObservacaoActivity extends AppCompatActivity {
         }
     }
 
-    public void cadastrarObservacaoClick(View v){
+    public void cadastrarObservacaoClick(View v) {
 
-        RadioGroup radioGroup = (RadioGroup) findViewById(R.id.radiogroup);
-        int selectedId = radioGroup.getCheckedRadioButtonId();
-        if(selectedId == R.id.paradoRadioButton){
-            estado = 0;//parado
-        }else{
-            estado = 1;//nadando
-        }
-        TextView comentariosTextview = (TextView) findViewById(R.id.cometatariosEditText);
-        comentarios = comentariosTextview.getText().toString();
+        final CharSequence[] items = {"Sim", "Não"};
 
-        new insereObservacao().execute();
+        AlertDialog.Builder builder = new AlertDialog.Builder(RealizaObservacaoActivity.this);
+        builder.setTitle("Confirma o cadastro?");
+        builder.setItems(items, new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int item) {
+                if (items[item].equals("Sim")) {
+                    RadioGroup radioGroup = (RadioGroup) findViewById(R.id.radiogroup);
+                    int selectedId = radioGroup.getCheckedRadioButtonId();
+                    if (selectedId == R.id.paradoRadioButton) {
+                        estado = 0;//parado
+                    } else {
+                        estado = 1;//nadando
+                    }
+                    TextView comentariosTextview = (TextView) findViewById(R.id.cometatariosEditText);
+                    comentarios = comentariosTextview.getText().toString();
 
+                    new insereObservacao().execute();
+                } else {
+                    Toast.makeText(RealizaObservacaoActivity.this, "Envio cancelado.", Toast.LENGTH_SHORT).show();
+                }
+
+            }
+        });
+        builder.show();
     }
 
     private class insereObservacao extends AsyncTask<String, Void, String> {
@@ -326,7 +234,7 @@ public class RealizaObservacaoActivity extends AppCompatActivity {
 
                 //Log.i("TESTE_",numero_observadores+posicao_tubarao+comportamento_tubarao+observacoes+id_bolsista+data_cadastro);
 
-                String link = "http://10.0.2.2/tubaraoproject/insereobservacao.php";
+                String link = "http://192.168.137.1/tubaraoproject/insereobservacao.php";
                 String data = URLEncoder.encode("numero_observadores", "UTF-8") + "=" + URLEncoder.encode(numero_observadores, "UTF-8");
                 data += "&" + URLEncoder.encode("posicao_tubarao", "UTF-8") + "=" + URLEncoder.encode(posicao_tubarao, "UTF-8");
                 data += "&" + URLEncoder.encode("comportamento_tubarao", "UTF-8") + "=" + URLEncoder.encode(comportamento_tubarao, "UTF-8");
@@ -362,10 +270,10 @@ public class RealizaObservacaoActivity extends AppCompatActivity {
         @Override
         protected void onPostExecute(String s) {
             super.onPostExecute(s);
-            if(s.equals("SUCESSO")){
+            if (s.equals("SUCESSO")) {
                 Toast.makeText(RealizaObservacaoActivity.this, "Observação cadastrada com sucesso!", Toast.LENGTH_SHORT).show();
-                finish();                
-            }else{
+                finish();
+            } else {
                 Toast.makeText(RealizaObservacaoActivity.this, "Ocorreu um erro, tente novamente.", Toast.LENGTH_SHORT).show();
             }
         }
@@ -397,7 +305,7 @@ public class RealizaObservacaoActivity extends AppCompatActivity {
         switch (requestCode) {
             case Utility.MY_PERMISSIONS_REQUEST_READ_EXTERNAL_STORAGE:
                 if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-                    if(userChoosenTask.equals("Tirar foto")) {
+                    if (userChoosenTask.equals("Tirar foto")) {
                         Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
                         startActivityForResult(intent, REQUEST_CAMERA);
                     }
@@ -409,17 +317,17 @@ public class RealizaObservacaoActivity extends AppCompatActivity {
     }
 
     private void capturarImagem() {
-        final CharSequence[] items = { "Tirar foto", "Cancelar" };
+        final CharSequence[] items = {"Tirar foto", "Cancelar"};
 
         AlertDialog.Builder builder = new AlertDialog.Builder(RealizaObservacaoActivity.this);
         builder.setTitle("Capturar com foto:");
         builder.setItems(items, new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int item) {
-                boolean result=Utility.checkPermission(RealizaObservacaoActivity.this);
+                boolean result = Utility.checkPermission(RealizaObservacaoActivity.this);
                 if (items[item].equals("Tirar foto")) {
-                    userChoosenTask ="Tirar foto";
-                    if(result) {
+                    userChoosenTask = "Tirar foto";
+                    if (result) {
 
                         //File photoFile = null;
                         try {
@@ -429,7 +337,7 @@ public class RealizaObservacaoActivity extends AppCompatActivity {
                         }
                         // Continue only if the File was successfully created
                         if (photoFile != null) {
-                            Uri photoURI = FileProvider.getUriForFile(RealizaObservacaoActivity.this,"com.example.android.fileprovider",photoFile);
+                            Uri photoURI = FileProvider.getUriForFile(RealizaObservacaoActivity.this, "com.example.android.fileprovider", photoFile);
 
                             Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
                             intent.putExtra(MediaStore.EXTRA_OUTPUT, photoURI);
@@ -456,14 +364,14 @@ public class RealizaObservacaoActivity extends AppCompatActivity {
         }
     }
 
-    private void trataImagem(){
+    private void trataImagem() {
 
         new detectaFaces().execute();
         Toast.makeText(RealizaObservacaoActivity.this, "Processando imagem...", Toast.LENGTH_SHORT).show();
 
     }
 
-    private class detectaFaces extends AsyncTask<String, Void, String>{
+    private class detectaFaces extends AsyncTask<String, Void, String> {
         @Override
         protected String doInBackground(String... params) {
             BitmapFactory.Options options = new BitmapFactory.Options();
@@ -486,10 +394,12 @@ public class RealizaObservacaoActivity extends AppCompatActivity {
         }
 
         @Override
-        protected void onPreExecute() {}
+        protected void onPreExecute() {
+        }
 
         @Override
-        protected void onProgressUpdate(Void... values) {}
+        protected void onProgressUpdate(Void... values) {
+        }
     }
 
 

@@ -58,7 +58,7 @@ public class LoginBolsistaActivity extends AppCompatActivity {
 
                  */
 
-                String link = "http://10.0.2.2/tubaraoproject/loginbolsista.php";
+                String link = "http://192.168.137.1/tubaraoproject/loginbolsista.php";
                 String data = URLEncoder.encode("username", "UTF-8") + "=" + URLEncoder.encode(username, "UTF-8");
                 data += "&" + URLEncoder.encode("password", "UTF-8") + "=" + URLEncoder.encode(password, "UTF-8");
 
